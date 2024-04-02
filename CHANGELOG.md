@@ -1,3 +1,7 @@
+## [2.0.2] - 2024-4-2
+
+* Make tvOS compatible
+
 ## [2.0.1] - 2023-7-23
 
 * Update Android Gradle

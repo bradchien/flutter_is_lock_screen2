@@ -11,7 +11,11 @@ public class SwiftIsLockScreenPlugin: NSObject, FlutterPlugin {
     public func handle(_ call: FlutterMethodCall, result: @escaping FlutterResult) {
         switch (call.method) {
         case "isLockScreen":
+#if os(iOS)
             return result(UIScreen.main.brightness == 0.0)
+#else
+            return result(false)
+#endif
         default:
             return result(FlutterMethodNotImplemented)
         }
